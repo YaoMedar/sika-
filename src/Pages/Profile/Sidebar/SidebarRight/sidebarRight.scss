@@ -1,0 +1,142 @@
+@import '../../../../Pages/style.scss';
+.sidebarRight{
+    @include themify($themes){
+    .rightbarContainerTop{
+       
+        background-color: themed('bgSoftLight');
+       
+        border-radius: 5px;
+        overflow: hidden;
+        overflow-y: scroll;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        h6{
+            margin-top: 5px;
+            color: themed('textColor');
+        }
+        .adsContainer{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            h5{
+                padding: .2rem;
+                margin-top: -0.59rem;
+                border-radius: 10px;
+                color: themed('textSoft');
+                position: absolute;
+                background-color: themed('bg');
+            }
+            .friendAdd{
+                display: flex;
+                flex-direction: column;
+                margin-top: 2rem;
+                .friendInfo{
+                    display: flex;
+                    gap: .5rem;
+                    align-items: center;
+                    font-size: 0.8rem;
+                    .imageFriend{
+                        width: 5rem;
+                        border-radius: .1rem;
+                    }
+                }
+                .twoButton{
+                    display: flex;
+                    justify-content: space-between;
+                    button{
+                        border: none;
+                        border-radius: .1rem;
+                        padding: .150rem;
+                        margin-top: 0.5rem;
+                        margin-bottom: 0.5rem;
+                        color: themed('textColor');
+                        cursor: pointer;
+                        background-color: themed('iconColorgold');
+                    }
+                }
+            }
+              
+
+            
+        }
+    }
+
+
+    
+
+    .rightbarContainerBottom{
+        height: 53.5vh;
+        background-color: themed('bgSoftLight');
+        border-radius: 5px;
+        overflow: hidden;
+        overflow-y: scroll;
+        h5{
+            color: themed('textSoft');
+            padding: .5rem;
+            position: absolute;
+            background-color: themed('bg');
+        }
+        h6{
+            margin-top: 10px;
+            color: themed('textColor');
+        }
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        .rightbarProfileContenaire{
+            margin-top: 2rem;
+            .rightbarProfileContenaireTop{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                .rightbarProfileContent{
+                    display: flex;
+                    align-items: center;
+                    .profileImge{
+                        width: 32px;
+                        height: 32px;
+                        cursor: pointer;
+                        border-radius: 2px;
+                    }
+                    span{
+                        margin-left: 5px;
+                        font-size: 12px;
+                        cursor: pointer;
+                        color: themed('textSoft');
+                    }
+                    .rigtbarProfil{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        margin-left: 5px;
+                        span{
+                            color: themed('textSoft');
+                        }
+                    }
+                }
+                .addfriendContainer{
+                    background-color: #eee;
+                    border-radius: 50px;
+                    transition: 1s all ease;
+                    &:hover{
+                        background-color: #049;
+                     }
+                    .addfriend{
+                        width: 20px;
+                        height:17px;
+                        padding: 5px;
+                        color: #049;
+                        cursor: pointer;
+                        &:hover{
+                            color:  #eee;
+                            transition: 0.6s all ease;
+                         }
+                    }
+                }
+            }
+        }
+    }
+}
+}

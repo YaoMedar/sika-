@@ -1,0 +1,78 @@
+@import '../../../Pages/style.scss';
+.post{
+    @include themify($themes){
+    .uploadPostContainer{
+        width: 85%;
+        border-radius: 2px;
+        background-color: themed('bgSoftLight');
+        margin: auto;
+        .uploadContent{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .profileImage{
+                width: 32px;
+                height: 32px;
+                margin-left: 5px;
+                border-radius: 2px;
+                cursor: pointer;
+            }
+            .postuploadAreaWrite{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                background-color:themed('bg');
+                margin-left: 5px;
+                height: 3vh;
+                width: 50%;
+                margin-top: 12px;
+                border-radius: 10px;
+                color: themed('textColor');
+            }
+            .icon{
+                cursor: pointer;
+            }
+        }
+        .uploadiconsContainer{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            .uploadicons{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-left: 10px;
+            }
+            .postSendBontton{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+                width:4rem;
+                height: 1.5rem;
+                font-size: 15px;
+                font-weight: bold;
+                background-color: #049;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                border-radius: 2px;
+            }
+        }
+        .uploadicons > :nth-child(1){
+            color: themed('iconColored');
+            cursor: pointer;
+        }
+        .uploadicons > :nth-child(2){
+            color: themed('iconColorgod');
+            cursor: pointer;
+        }
+        .uploadicons > :nth-child(3){
+            color: themed('iconColor');
+            cursor: pointer;
+        }
+    } 
+    
+}}
+

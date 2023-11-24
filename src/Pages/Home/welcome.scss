@@ -1,0 +1,135 @@
+@import '../style.scss';
+
+:root {
+    --sikaColor: linear-gradient(180deg, #FFF 5%, var(--SB) 99.36%);
+    --SBL: #00267F;
+    --SC: #049;
+    --SB: #049cff;
+    --SG: #e18b00;
+    --smboxShadow: 1px 1px 60px rgba(255, 255, 255, 0.5);
+    --smboxShadowblack: 0px 0px 30px rgb(0, 0, 0, 0.5);
+    color: rgb(53, 150, 240);
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900&display=swap");
+
+
+//@navbar
+//navbar menu right
+
+.welcomeContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    .Welcome {
+        display: flex;
+        position: relative;
+        align-self: center;
+        width: 18rem;
+        height: 18rem;
+        border-radius: 100%;
+        box-shadow: 1px 1px 60px;
+        border: none;
+
+        &:hover {
+            background: linear-gradient(90deg, #FFF 5%, var(--SB) 99.36%);
+            border: none;
+        }
+    }
+
+    .Welcome>* {
+        position: absolute;
+    }
+
+    .Welcome> :nth-child(1) {
+        top: -1rem;
+        left: 6.5rem;
+        cursor: pointer;
+    }
+
+    .Welcome> :nth-child(2) {
+        top: 7rem;
+        left: -1rem;
+        cursor: pointer;
+    }
+
+    .Welcome> :nth-child(3) {
+        top: 6.5rem;
+        left: 6.5rem;
+        cursor: pointer;
+    }
+
+    .Welcome> :nth-child(4) {
+        top: 14.4rem;
+        left: 7rem;
+        cursor: pointer;
+    }
+
+    .Welcome> :nth-child(5) {
+        top: 6.5rem;
+        left: 14.5rem;
+        cursor: pointer;
+    }
+
+
+    .secCircle {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+        box-shadow: var(--smboxShadow);
+        transition: 2s;
+        cursor: pointer;
+
+    }
+
+    .CircleCenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50px;
+        background-color: #FFF;
+
+        .logosika {
+            transform: scale(0.6);
+            border-radius: 50px;
+            height: 5rem;
+            width: 5rem;
+        }
+    }
+
+    .secCircle>img {
+        transform: scale(0.6);
+    }
+
+
+    @media (prefers-reduced-motion: no-preference) {
+        .Welcome {
+            animation: w-mainCircle-spin infinite 60s linear;
+
+            &:hover {
+                animation: w-mainCircle-spin infinite 0s linear;
+                cursor: pointer;
+            }
+        }
+    }
+
+    @keyframes w-mainCircle-spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+
+}

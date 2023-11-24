@@ -1,0 +1,113 @@
+@import "../../Pages/style.scss";
+
+.mainNavbaar{
+    @include themify($themes){
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+    //border-bottom: themed('buttonGB') solid;
+    background-color: themed("bg");
+    .logoContainer{
+        flex: 0.2;
+        .logo{
+            width: 32px;
+            height: 32px;
+            border-radius: 50px;
+            pointer-events: none;
+            cursor: pointer;
+            z-index: 1;
+            @keyframes logo {
+                from {
+                  transform: rotate(0deg);
+                }
+                to {
+                  transform: rotate(360deg);
+                }
+            }
+            border: themed("borderLight") dashed 1px;
+        }
+        
+        
+        
+    }
+    .searchInputContainer{
+        display: flex;
+        align-items: center;
+        flex: 4;
+        background-color:themed("bg");
+        border-right:themed('border') solid 2px;
+        border-left:themed('border') solid 2px;
+        border-radius: 15px;
+        .iconSearch{
+            color:themed('iconColor');
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 2;
+            border: none;
+            border-radius: 50px;
+        }
+        .lightDarkMode{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 30px;
+            border-radius: 20px;
+            border:themed('border') solid 1px;
+            .sunIcon{
+                color: #d98c1a;
+                cursor: pointer;
+                border-radius: 20px;
+            }
+            .MoonIcon{
+                color: rgb(11, 24, 40);
+                cursor: pointer; 
+            }
+            
+        }
+      
+        .searchInputNavbar{
+            width:100%;
+            padding: 4px;
+            border: none;
+            border-radius: 20px;
+            background-color:themed('bgSoft');
+            color: themed("textColor");
+        }
+    }
+    
+    .iconsContainer{
+        display: flex;
+        align-items: center;
+        flex: 0.2;
+        .NotificationIcon{
+           width: 20px;
+           height: 20px;
+           margin-left: 20px;
+           color: #d98c1a;
+           cursor: pointer;
+        }
+        .chatIcon{
+            width: 20px;
+            height: 20px;
+            margin-left: 20px;
+            color: #049;
+            cursor: pointer;
+         }
+         .navbarRightContent{
+            .profileImage{
+                width: 24px;
+                height: 24px;
+                border-radius: 50px;
+                margin-left: 20px;
+                cursor: pointer;
+            }
+            .userName{
+                color: #049;
+                cursor: pointer;
+            }
+         }
+        
+    }   
+}
+}

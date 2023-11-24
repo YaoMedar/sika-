@@ -1,0 +1,34 @@
+@import './Pages/style.scss';
+.App {
+  @include themify($themes){
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: themed("bg");
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo infinite 20s linear;
+    &:hover{
+      animation: logo infinite 0s linear;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,72 @@
+ //Function for dark modde 
+$themes:(
+    light:(
+        textColor:#000,
+        bg:#ebeef2,
+        bgSoft:#ebeef2,
+        bgSoftLight:#FFF,
+        textSoft:#483b3b,
+        border:#cfcfcf,
+        borderLight:#aaa,
+        iconColor:#049,
+        iconColored:#990000,
+        iconColorgold:#d5a619,
+        golds:#d98c1a,
+        buttonGB:#049
+    ),
+    dark:(
+        textColor:#fff,
+        bg:#222,
+        bgSoft:#333,
+        bgSoftLight:#444,
+        textSoft:#999,
+        border:#605f5f,
+        borderLight:#686868,
+        iconColor:#1392e1,
+        iconColored:#ce0101,
+        iconColorgold:#d98c1a,
+        golds:#d98c1a,
+        buttonGB:#777777
+    ),
+);
+
+
+@mixin themify($themes){
+    @each $theme, $map in $themes {
+        .theme-#{$theme} &{
+            $theme-map: () !global;
+            @each $key, $submap in $map{
+                $value: map-get(map-get($themes, $theme), "#{$key}");
+                $theme-map: map-merge(
+                    $theme-map,
+                    (
+                        $key:$value,
+                    )
+                ) !global;
+            }
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}
+@function themed($key){
+    @return map-get($theme-map, $key);
+}
+
+@mixin mobile {
+    @media (max-width:675px){
+    @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width:912px){
+    @content;
+    }
+}
+
+@mixin tablette {
+    @media (max-width:1024px){
+    @content;
+    }
+}

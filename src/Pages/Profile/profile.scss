@@ -1,0 +1,380 @@
+@import '../../Pages/style.scss';
+
+//PROFILE LEFT SIBAR SCSS
+.profilLeft {
+    @include themify($themes){
+   // margin-top: 43px;
+    max-width: 14pc;
+
+    background-color: themed('gbSoftLight');
+    .leftContainer {
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        overflow: hidden;
+        .leftContainerTop {
+            
+            height: 45vh;
+            width: 14pc;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            background-color: themed('bgSoftLight');
+            .hrProfile{
+                color: rgb(170, 170, 170,0.5);
+            }
+            .coverImg {
+                height: 150px;
+                width: 100%;
+                object-fit: cover;
+                cursor: pointer;
+            }
+
+            .leftContainerTopContent {
+                display: flex;
+                align-items: center;
+                margin-top: -25px;
+                .profileUserImg {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50px;
+                    margin-left: 10px;
+                    object-fit: cover;
+                    cursor: pointer;
+                }
+                .profileInfo {
+                    display: flex;
+                    flex-direction: column;
+                    .profileUsername {
+                        color: themed('textColor');
+                        font-size: large;
+                        font-weight: 800;
+                    }
+                    .profileDesc{
+                        color: themed('textColor');
+                        text-transform: capitalize;
+                        margin-left: 5px;
+                        font-size: 12px;
+                        text-decoration: underline;
+                        cursor: pointer;
+                        color: themed('textColor');
+                    }
+                }
+
+            }
+
+            .profileView {
+                color: themed('textColor');
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin-top: 10px;
+                font-size: 13px;
+                p {
+                    font-size: 11px;
+                    cursor: pointer;
+                }
+            }
+
+            .friends {
+                display: flex;
+                justify-content: space-around;
+                padding: 5px;
+                .friendspan {
+                    font-size: 12px;
+                    color: themed('textColor');
+                }
+                p{
+                    color: themed('textColor');
+                    font-size: 11px;
+                    cursor: pointer;   
+                }
+            }
+
+            .userInfo {
+                color: themed('textColor');
+                margin-top: 20px;
+                span {
+                    display: flex;
+                    justify-content: flex-start;
+                    margin-left: 10px;
+                    font-weight: 600;
+                    font-size: 15px;
+                }
+                .userBioDesc {
+                    width: 80%;
+                    font-size: 12px;
+                    margin-top: 10px;
+                    font-weight: 500;
+                    overflow: hidden;
+                    overflow-y: scroll;
+                    height: 8.5vh;
+                    margin-left: 20px;
+                    text-align:justify;
+                    cursor: pointer;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                }
+            }
+
+            .bouton {
+                color:themed('textColor');
+                background-color:themed('buttonGB');
+                border: none;
+                font-size: 12px;
+                font-weight: bold;
+                height: 2rem;
+                border-top-left-radius: 100px;
+                border-top-right-radius: 100px;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .leftprofileBottom {
+        
+        background-color: themed('bgSoftLight');
+        margin-top: 20px;
+        overflow: hidden;
+        height: 45vh;
+        width: 14pc;
+        .leftprofileBottomTop {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            color: themed('textColor');
+        }
+
+        .leftprofileBottomBottom {
+            .friends {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                .seefriends {
+                    font-size: 14px;
+                    color: themed('textColor');
+                    font-weight: 500;
+                    margin-bottom: 5px;
+                    cursor: pointer;
+                    border: solid 2px themed('buttonGB');
+                    border-radius: 5px;
+                    padding: 2px;
+                }
+            }
+            .friendImgContainer{
+                height: 39vh;
+                overflow-y: scroll;
+                &::-webkit-scrollbar {
+                display: none;
+                }
+                .friendImg {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 10px;
+    
+                    .friendImgContent {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        .friendImg {
+                            width: 70px;
+                            height: 70px;
+                            object-fit: contain;
+                            border-radius: 10px;
+                            cursor: pointer;
+                        }
+    
+                        span {
+                            color: themed('textColor');
+                            font-size: 13px;
+                            font-weight: 300;
+                            cursor: pointer;
+                            text-transform: capitalize;
+                        }
+                    }
+    
+    
+                }
+            }
+           
+
+        }
+    }
+
+}
+}
+
+
+//PROFILE RIGHT SIDEBAR SCSS
+.profileRight {
+    @include themify($themes){
+    max-width: 14pc;
+    //margin-top: 43px;
+    .rightbarContainerTop {
+        height: 45vh;
+        width: 14pc;
+        background-color: themed('bgSoftLight');
+        border-radius: 5px;
+        overflow: hidden;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .adsContainer {
+            display: flex;
+            padding: 10px;
+            flex-direction: column;
+            overflow: hidden;
+            cursor: pointer;  
+            h5 {
+                display: flex;
+                justify-content: flex-start;
+                font-weight: 600;
+                padding: 5px;
+                color: themed('textColor');
+            }
+
+            .friendAdd {
+                display: flex;
+                padding: 10px;
+                flex-direction: column;
+                overflow: hidden;
+                cursor: pointer;
+
+                .friendInfo {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 10px;
+
+                    .imageFriend {
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 2px;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        color: themed('textColor');
+                    }
+
+                }
+                
+                .twoButton {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5px;
+
+                    button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 1.1rem;
+                        width: 3rem;
+                        background-color: #049;
+                        color: #ffffff;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 2px;
+                        font-size: 12px;
+                    }
+                }
+
+                .twoButton>:nth-child(2) {
+                    color: #fff;
+                    background-color: #d98c1a;
+                }
+            }
+
+        }
+    }
+
+    .rightbarContainerBottom {
+        width: 14pc;
+        height: 45vh;
+        background-color: themed('bgSoftLight');
+        margin-top: 20px;
+        border-radius: 5px;
+        overflow: hidden;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        h5 {
+            padding: 5px;
+            text-transform: capitalize;
+            color: themed('textColor');
+        }
+
+        .rightbarProfileContenaire {
+            .rightbarProfileContenaireTop {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+
+                .rightbarProfileContent {
+                    display: flex;
+                    align-items: center;
+
+                    .profileImge {
+                        width: 32px;
+                        height: 32px;
+                        cursor: pointer;
+                        border-radius: 2px;
+                    }
+
+                    span {
+                        margin-left: 5px;
+                        font-size: 11px;
+                        color: themed('textColor');
+                    }
+                    h6{
+                        color: themed('textSoft');
+                        font-weight: 800;
+                    }
+                    .rigtbarProfil {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        margin-left: 5px;
+                    }
+                }
+
+                .addfriendContainer {
+                    background-color: rgb(3, 90, 196,0.2);
+                    border-radius: 50px;
+                    transition: 1s all ease;
+                    &:hover {
+                        background-color: #049;
+                    }
+
+                    .addfriend {
+                        width: 20px;
+                        height: 17px;
+                        padding: 5px;
+                        color:themed('textSoft');
+                        cursor: pointer;
+
+                        &:hover {
+                            color: #eee;
+                            transition: 0.6s all ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}

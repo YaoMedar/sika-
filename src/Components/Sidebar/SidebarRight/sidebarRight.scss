@@ -1,0 +1,176 @@
+@import '../../../Pages/style.scss';
+.sidebarRight{
+    
+    @include themify($themes){
+        
+    .rightbarContainerTop{
+        // height: 26vh;
+        width: 15pc;
+        background-color: themed('bgSoftLight');
+        margin-top: 20px;
+        border-radius: 5px;
+        overflow: hidden;
+        overflow-y: scroll;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        h6{
+            margin-top: 5px;
+            color: themed('textColor');
+        }
+        .adsContainer{
+            display: flex;
+            padding: 10px;
+            .adsImage{
+                height: 64px;
+                width: 100px;
+                cursor: pointer;
+                border-radius: 2px;
+            }
+            .codeContainer{
+                display: flex;
+                flex-direction: column;
+                margin-left: 10px;
+
+                span{
+                    display: flex;
+                    justify-content: flex-start;
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: themed('textColor');
+                }
+            }
+            .codeContainer>:nth-child(1){
+                font-size: 13px;
+                font-weight: 600;
+                color: themed('textSoft');
+            }
+        }
+    }
+
+
+    .rightbarContainerMiddle{
+        // height: 22vh;
+        width: 15pc;
+        background-color: themed('bgSoftLight');
+        margin-top: 20px;
+        border-radius: 5px;
+        overflow: hidden;
+        overflow-y: scroll;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        h6{
+            margin-top: 5px;
+            color: themed('textColor');
+        }
+        .onlineFriendContainer{
+            display: flex;
+            padding: 10px;
+            position: relative;
+            .onlineFriendImage{
+                width: 32px;
+                height: 32px;
+                cursor: pointer;
+                border-radius: 20px;
+                border: #eee solid 1px;
+            }
+            .onlineButton{
+                background-color: #049fce;
+                height: 10px;
+                width: 10px;
+                border-radius: 20px;
+                position: absolute;
+                border: #ffffff solid 1px;
+            }
+            .mddleOnline{
+                display: flex;
+                flex-direction: column;
+                margin-left: 10px;
+
+                span{
+                    display: flex;
+                    justify-content: flex-start;
+                    font-size: 13px;
+                    font-weight: 300;
+                    color: themed('textColor');
+                }
+            }
+            .mddleOnline>:nth-child(1){
+                font-size: 13px;
+                font-weight: 600;
+                color: themed('textSoft');
+            }
+        }
+    }
+
+
+    .rightbarContainerBottom{
+        width: 15pc;
+        background-color: themed('bgSoftLight');
+        margin-top: 20px;
+        border-radius: 5px;
+        overflow: hidden;
+        overflow-y: scroll;
+        h6{
+            margin-top: 10px;
+            color: themed('textColor');
+        }
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        .rightbarProfileContenaire{
+            .rightbarProfileContenaireTop{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                .rightbarProfileContent{
+                    display: flex;
+                    align-items: center;
+                    .profileImge{
+                        width: 32px;
+                        height: 32px;
+                        cursor: pointer;
+                        border-radius: 2px;
+                    }
+                    span{
+                        margin-left: 5px;
+                        font-size: 12px;
+                        cursor: pointer;
+                        color: themed('textSoft');
+                    }
+                    .rigtbarProfil{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        margin-left: 5px;
+                        span{
+                            color: themed('textSoft');
+                        }
+                    }
+                }
+                .addfriendContainer{
+                    background-color: #eee;
+                    border-radius: 50px;
+                    transition: 1s all ease;
+                    &:hover{
+                        background-color: #049;
+                     }
+                    .addfriend{
+                        width: 20px;
+                        height:17px;
+                        padding: 5px;
+                        color: #049;
+                        cursor: pointer;
+                        &:hover{
+                            color:  #eee;
+                            transition: 0.6s all ease;
+                         }
+                    }
+                }
+            }
+        }
+    }
+}
+}

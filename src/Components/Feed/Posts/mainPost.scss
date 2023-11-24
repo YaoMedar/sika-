@@ -1,0 +1,261 @@
+@import '../../../Pages/style.scss';
+
+.mainPost {
+    @include themify($themes) {
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+        overflow: hidden;
+        overflow-y: scroll;
+        align-self: center;
+        background-color: themed('bgSoft');
+        height: calc(100vh);
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .subPostContainer {
+            width: 85%;
+            height: 100vh;
+
+            .subPostCard {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 40px;
+                margin-top: 1px;
+                background-color: themed('bg');
+                border-radius: 5px;
+
+                .timeAndFolowBy {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+
+                    .postTime {
+                        font-size: 11px;
+                        color: themed("textSoft");
+                        margin-left: 40px;
+                    }
+
+                    .following {
+                        color: #d98c1a;
+                        font-size: 11px;
+                        margin-right: 40px;
+                    }
+                }
+
+                background-color: themed("bgSoftLight");
+
+                .subPostCardContent {
+
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-top: 10px;
+                    font-size: 14px;
+                    color: themed("textColor");
+
+                    .profileImage {
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50px;
+                        margin-left: 20px;
+                        cursor: pointer;
+                    }
+
+                    span {
+                        cursor: pointer;
+                    }
+                }
+
+                .following {
+                    font-size: 10px;
+                    display: flex;
+                }
+
+                .postContent {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        font-size: 14px;
+                        width: 90%;
+                        color: themed('textColor');
+                    }
+
+                    .postImage {
+                        align-self: center;
+                        width: 90%;
+                        height: 90%;
+                        margin-top: 0.5rem;
+                        padding-bottom: 20px;
+                        border-radius: 5px;
+                        object-fit: contain;
+                    }
+                }
+
+                .ComentLikeCardContainer {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-bottom: 15px;
+
+                    .ComentLikeCard {
+                        display: flex;
+                        justify-content: flex-start;
+
+                        .LikeCardContent {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            .icon {
+                                cursor: pointer;
+                                color: themed("iconColor");
+                            }
+
+                            span {
+                                font-size: 11px;
+                                color: themed("textSoft");
+                            }
+
+                        }
+
+                        .ComentCardContent {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-left: 10px;
+                            width: 100%;
+
+                            .icon {
+                                cursor: pointer;
+                                color: themed("iconColor");
+                            }
+
+                            span {
+                                font-size: 11px;
+                                color: themed("textSoft");
+                            }
+                        }
+                    }
+                }
+
+                .ShareCardContent {
+                    display: flex;
+
+                    .icon {
+                        cursor: pointer;
+                        color: themed("iconColor");
+                    }
+
+                    span {
+                        color: themed("textSoft");
+                    }
+                }
+
+                .addCommentsContainer {
+                    margin-top: 10px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    .comment {
+                        display: flex;
+                        justify-content: flex-start;
+                        margin-left: 20px;
+
+                        img {
+                            height: 32px;
+                            width: 32px;
+                            border-radius: 30px;
+                            cursor: pointer;
+                        }
+
+                        textarea {
+                            border: none;
+                            margin-bottom: 20px;
+                            background-color: themed("bgSoft");
+                            color: themed('textColor');
+                        }
+
+                    }
+
+                    .addComments {
+                        margin-bottom: 20px;
+
+                        button {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 5px;
+                            width: 3.5rem;
+                            height: 1.4rem;
+                            font-size: 15px;
+                            font-weight: 200;
+                            background-color: themed("iconColorgod");
+                            color: themed("textColor");
+                            border: none;
+                            cursor: pointer;
+                            border-radius: 2px;
+                        }
+                    }
+
+                }
+
+                .commentUserContainer {
+                    .commentUser {
+                        display: flex;
+                        justify-content: space-around;
+                        flex-direction: column;
+
+                        .commentcontentsTop {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            margin-left: 10px;
+
+                            .commentUserIgm {
+                                height: 24px;
+                                width: 24px;
+                                border-radius: 30px;
+                                cursor: pointer;
+                            }
+
+                            span {
+                                font-size: 13px;
+                                color:themed('buttonGB');
+                                margin-left: 5px;
+                            }
+                        }
+
+                        .commentcontentBottom {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 90%;
+
+                            p {
+                                margin-left: 40px;
+                                margin-bottom: 20px;
+                                font-size: 14px;
+                                color: themed("textColor");
+                            }
+
+                            .replay {
+                                font-size: 12px;
+                                color: #aaa;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+    }
+}

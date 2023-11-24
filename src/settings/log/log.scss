@@ -1,0 +1,70 @@
+.lognup{
+    height: 100vh;
+    background: linear-gradient(180deg, #FFF 5%, var(--SB) 99.36%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .card{
+        width: 100%;
+        display: flex;
+        background-color: #ffffff;
+        border-radius: 10px;
+        min-height: 600px;
+        overflow: hidden;
+        flex-direction: row-reverse;
+        .left{
+            flex: 1;
+            background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(19, 86, 211, 0.4)), url("../../Components/images/A9.jpg");
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            color: #FFF;
+            h1{
+                font-size: 100px;
+                line-height: 100px;
+            }
+            span{
+                font-size: 14px;
+            }
+            button{
+                width: 50%;
+                padding: 10px;
+                border: none;
+                background-color: #fff;
+                color: #049;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+        .right{
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h1{
+                color: #555;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                input{
+                    border: none;
+                    border-bottom: solid 1px lightseagreen;
+                    padding: 15px 10px;
+                }
+                button{
+                    width: 50%;
+                    padding: 10px;
+                    border: none;
+                    background-color: #049;  
+                    color: #FFF;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

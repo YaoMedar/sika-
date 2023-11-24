@@ -1,0 +1,9 @@
+@import "../../Pages/style.scss";
+
+.feed{
+    @include themify($themes){
+        margin-top: 20px;
+        background-color: themed('bgSoft');
+    }
+       
+}

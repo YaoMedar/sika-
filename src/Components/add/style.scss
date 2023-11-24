@@ -1,0 +1,39 @@
+
+.items{
+    border: solid 1px #999;
+    padding: 4px;
+    border-radius: 50%;
+    background-color: #eee;
+    color: #777;
+    &:hover{
+        color: #049;  
+    }
+}
+
+.userImage{
+    border: solid 2px #bbbbbb;
+    padding: 4px;
+    border-radius: 50%;
+    color: #777;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s ease all;
+    &:hover{
+        color: #049;  
+    }
+
+}
+.user, .icons{
+    font-size: 8px;
+    color: #ccc;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover{
+        color: #FFFFFF; 
+        font-size: 8.1px; 
+        transition: 0.1s ease all;
+    }
+}
